@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'recupera_contraseña.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
@@ -191,7 +193,12 @@ class _RememberState extends State<Remember> {
         ),
         const Spacer(),
         TextButton(
-            onPressed: () => {},
+            onPressed: () => {
+              Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Recuperar())
+            )
+            },
             child: const Text(
               '¿Olvido su contraseña?',
               style: TextStyle(fontSize: 12),
